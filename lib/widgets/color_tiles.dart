@@ -1,18 +1,15 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes/theme.dart';
 
 class ColorRow extends StatelessWidget {
   final int Selectedindex;
-  final int indexColor;
   final bool foundtheme;
   final Function setindex;
 
   const ColorRow(
       {Key? key,
       required this.Selectedindex,
-      required this.indexColor,
       required this.foundtheme,
       required this.setindex})
       : super(key: key);
@@ -20,18 +17,20 @@ class ColorRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           for (int i = 0; i < Col.length; i++)
-            ColorTile(
-              C: Col[i],
-              isSelected: Selectedindex == i,
-              setindex: setindex,
-              myindex: i,
-              Changecurrenttheme: !foundtheme && i == indexColor ? true : null,
-            )
+            Expanded(
+              child: ColorTile(
+                C: Col[i],
+                isSelected: Selectedindex == i,
+                setindex: setindex,
+                myindex: i,
+              ),
+            ),
         ],
       ),
     );
@@ -57,22 +56,11 @@ class ColorTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ThemeSwitcher(
       builder: (cont) {
-        try {
-          if (Changecurrenttheme != null &&
-              Theme.of(cont).scaffoldBackgroundColor != C) {
-            Future.delayed(Duration.zero)
-                .then((value) => setindex(myindex))
-                .then((value) => ThemeSwitcher.of(cont).changeTheme(
-                    theme: ThemeData(
-                        primarySwatch: C,
-                        backgroundColor: C,
-                        scaffoldBackgroundColor: C)));
-          }
-        } catch (e) {}
         return GestureDetector(
           onTap: () {
             setindex(myindex);
             ThemeSwitcher.of(cont).changeTheme(
+                isReversed: true,
                 theme: ThemeData(
                     primarySwatch: C,
                     backgroundColor: C,
@@ -81,10 +69,9 @@ class ColorTile extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
+                shape: BoxShape.circle,
                 color: isSelected ? Colors.black : null),
             child: CircleAvatar(
-              radius: 20,
               backgroundColor: C,
             ),
           ),

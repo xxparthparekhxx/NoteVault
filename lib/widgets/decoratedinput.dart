@@ -20,7 +20,7 @@ class Cinput extends StatelessWidget {
       controller: controller,
       minLines: minlines,
       maxLines: maxlines,
-      style: TextStyle(color: Colors.white),
+      style: const TextStyle(color: Colors.white),
       decoration: InputDecoration(
           border: const OutlineInputBorder(
               borderSide: BorderSide(
@@ -30,7 +30,7 @@ class Cinput extends StatelessWidget {
           filled: true,
           fillColor: Colors.black26,
           label: Text(lable),
-          labelStyle: TextStyle(color: Colors.white)),
+          labelStyle: const TextStyle(color: Colors.white)),
     );
   }
 }
