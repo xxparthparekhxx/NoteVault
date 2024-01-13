@@ -1,6 +1,6 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
-import 'package:notes/theme.dart';
+import '../theme.dart';
 
 class ColorRow extends StatelessWidget {
   final int Selectedindex;

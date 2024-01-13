@@ -1,7 +1,7 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
-import 'package:notes/providers/np.dart';
-import 'package:notes/screens/home.dart';
+import './providers/np.dart';
+import './screens/home.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(const MyApp());

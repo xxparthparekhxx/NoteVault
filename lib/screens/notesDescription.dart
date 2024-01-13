@@ -2,9 +2,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:notes/models/note.dart';
-import 'package:notes/providers/np.dart';
-import 'package:notes/widgets/checkbox.dart';
+import '../models/note.dart';
+import '../providers/np.dart';
+import '../widgets/checkbox.dart';
 import 'package:provider/provider.dart';
 
 class NotesDescription extends StatefulWidget {

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:notes/models/note.dart';
-import 'package:notes/theme.dart';
+import '../models/note.dart';
+import '../theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum sort {

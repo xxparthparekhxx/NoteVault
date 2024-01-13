@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:notes/providers/np.dart';
+import '../providers/np.dart';
 import 'package:provider/provider.dart';
 
 class popupmenu extends StatelessWidget {

@@ -1,13 +1,13 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:notes/models/note.dart';
-import 'package:notes/providers/np.dart';
-import 'package:notes/screens/input.dart';
-import 'package:notes/theme.dart';
-import 'package:notes/widgets/color_tiles.dart';
-import 'package:notes/widgets/note_tile.dart';
-import 'package:notes/widgets/popupmenu.dart';
+import '../models/note.dart';
+import '../providers/np.dart';
+import '../screens/input.dart';
+import '../theme.dart';
+import '../widgets/color_tiles.dart';
+import '../widgets/note_tile.dart';
+import '../widgets/popupmenu.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 

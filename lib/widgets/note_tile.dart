@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:notes/models/note.dart';
-import 'package:notes/providers/np.dart';
-import 'package:notes/screens/notesDescription.dart';
-import 'package:notes/widgets/checkbox.dart';
+import '../models/note.dart';
+import '../providers/np.dart';
+import '../screens/notesDescription.dart';
+import '../widgets/checkbox.dart';
 import 'package:provider/provider.dart';
 
 class NoteTile extends StatefulWidget {
